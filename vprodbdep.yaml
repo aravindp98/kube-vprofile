@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: vprodb
-#  replicas: 1
+  replicas: 1
   template:
     metadata:
       labels:
@@ -18,8 +18,8 @@ spec:
         - name: vprodb
           image: vprofile/vprofiledb:V1
           volumeMounts:
-            - mountPath: /var/lib/mysql
-              name: vpro-db-data
+            - name: vpro-db-data
+              mountPath: /var/lib/mysql
           ports:
             - name: vprodb-port
               containerPort: 3306
