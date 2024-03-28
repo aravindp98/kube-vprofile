@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: vpromc
   labels:
-    app: vpromc
+    app: vpromcC
 spec:
   selector:
     matchLabels:
